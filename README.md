@@ -988,3 +988,19 @@ theorem max_vertical_intersections_xy13_4y :
       (∃ x₀ : ℝ, Set.encard (C ∩ verticalLine x₀) = 3) := by
   sorry
 ```
+
+## 86. Prove that there is no upper bound on the number of intersections between the curve $3y^2 = \sin(9xy) + \frac{x}{\pi} - 7y$ and a circle of arbitrary position and size
+
+```lean4
+import Mathlib
+
+def curve : Set (ℝ × ℝ) :=
+  { p : ℝ × ℝ | 3 * p.2 ^ 2 = Real.sin (9 * p.1 * p.2) + p.1 / Real.pi - 7 * p.2 }
+
+def circle (c : ℝ × ℝ) (r : ℝ) : Set (ℝ × ℝ) :=
+  { p : ℝ × ℝ | (p.1 - c.1) ^ 2 + (p.2 - c.2) ^ 2 = r ^ 2 }
+
+theorem curve_circle_intersections_not_bounded_above :
+    ¬ ∃ N : ℕ, ∀ (c : ℝ × ℝ) (r : ℝ), r > 0 → (circle c r ∩ curve).encard ≤ N := by
+  sorry
+```
