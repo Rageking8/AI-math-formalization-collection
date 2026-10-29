@@ -1,6 +1,6 @@
-# AI Lean challenges
+# AI Math Formalization Collection
 
-List of Lean challenges that can be used to test various AI models.
+A collection of mostly novel math problems, along with their AI Lean/Rocq formalization.
 
 ## 1. Prove that $\left\lceil\left(\frac{5+\sqrt{17}}{2}\right)^x\right\rceil$ is odd for all natural $x$
 
