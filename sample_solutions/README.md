@@ -6,6 +6,10 @@ Bunch of sample solutions from various models.
 
 Only successful attempts are included in the collection, meaning multiple sessions might be needed to get a valid proof, and harder problems will only have solutions by a few stronger models.
 
+## Validity
+
+All sample solutions are tested right before being added to the collection (i.e. each solution is valid at the time of its commit). If breaking changes were introduced in Lean/Rocq, the solutions might rot and no longer compile.
+
 ## Prompt structure
 
 ### First prompt
