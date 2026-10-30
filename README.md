@@ -2,6 +2,26 @@
 
 A collection of mostly novel math problems, along with their AI Lean/Rocq formalization.
 
+## Problem creation process
+
+### Scope
+
+- Length: intentionally short (capped at 1-2 lines)
+- Prerequisites: minimal topics needed, almost all problems should be comprehensible with high school level knowledge
+- Difficulty: ranges from trivial to extremely hard, but the target is at the high school competition level
+
+### Step 1: Brainstorm/initial problem
+
+Various AI models are used to brainstorm a list of short, novel, and hard problems, typically guided by a human-provided seed topic. The seed topic varies in specificity, from just providing a sub-topic (e.g. "problem about probability and parity") to giving a detailed problem structure to follow (e.g. "equation involving sin, fractional part, and absolute value, such that there are no real solutions"). In some cases, the brainstorm process is replaced by a human-provided problem. From there, a candidate problem that seems interesting and meets the problem scope is selected.
+
+### Step 2: Iterate
+
+The candidate problem is given to various AI models to solve, helping gauge the difficulty and techniques required. In most cases, the problem at this point is too plain ("cookie-cutter" problems that lack originality and novelty) and too simple (easy to solve and/or requires little reasoning). Therefore, different AI models are used to iterate on the problem by increasing its difficulty and dimensionality. To prevent the model from drastically changing the essence of the candidate problem (the problem structure might already be favourable), it is instructed to "make minimal changes" and/or "preserve problem structure", while improving the problem's difficulty. The iteration process can continue for as many cycles as required, until a problem is deemed satisfactory. As a final check, the problem is given to AI models to solve to ensure soundness (problem is correct and solvable with a definitive solution) and wording precision (minimize ambiguity or inference needed to parse the problem).
+
+### Step 3: Formalize/solve
+
+Once the problem is more or less finalized, the natural language version is then given to an AI model, which converts it into Lean/Rocq. Care is taken to ensure the code is readable even with minimal experience with the language. If needed, an alternative formalization is requested and compared with existing ones. Once a version is chosen, AI models are then consulted on whether the natural language version matches the code version exactly. Lastly, the final code can be added as a new problem in the collection, and be given to various AI models to solve, before their solutions are added as samples.
+
 ## 1. Prove that $\left\lceil\left(\frac{5+\sqrt{17}}{2}\right)^x\right\rceil$ is odd for all natural $x$
 
 ```lean4
