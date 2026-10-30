@@ -6,28 +6,24 @@ Bunch of sample solutions from various models.
 
 ### First prompt
 
-#### Normal
+#### Syntax
 
 ```txt
-Complete the following lean 4 proof:
-import Mathlib
-
-...
+<instructions>:
+<problem>
 ```
 
-#### Golf
+#### `<instructions>`
 
+Lean:
+1. `Complete the following lean 4 proof`
+1. `Complete the following lean 4 proof and golf it to the smallest size possible`
+1. `Complete the following lean 4 proof without using native_decide`
+
+#### `<problem>`
+
+Lean:
 ```txt
-Complete the following lean 4 proof and golf it to the smallest size possible:
-import Mathlib
-
-...
-```
-
-#### Restrictions
-
-```txt
-Complete the following lean 4 proof without using native_decide:
 import Mathlib
 
 ...
