@@ -21,12 +21,20 @@ Lean:
 1. `Complete the following lean 4 proof without using native_decide`
 1. `Complete the following lean 4 proof without using native_decide and golf it to the smallest size possible`
 
+Rocq:
+1. `Complete the following rocq 9.1 proof`
+
 #### `<problem>`
 
 Lean:
 ```txt
 import Mathlib
 
+...
+```
+
+Rocq:
+```txt
 ...
 ```
 
