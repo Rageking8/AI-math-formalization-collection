@@ -1024,3 +1024,16 @@ theorem curve_circle_intersections_not_bounded_above :
     ¬ ∃ N : ℕ, ∀ (c : ℝ × ℝ) (r : ℝ), r > 0 → (circle c r ∩ curve).encard ≤ N := by
   sorry
 ```
+
+## 87. Prove that $\displaystyle\sum_{m = 1}^{\infty}\sum_{n = 1}^{\infty} \frac{sgn(2m - n - 5) + (-1)^{min(m, n) + 3}}{(max(m, n) + 1)!} = \frac{1249}{120} - 4e$
+
+```lean4
+import Mathlib
+
+theorem double_infinite_sum_sgn_factorial_eq :
+    (∑' (m : ℕ+) (n : ℕ+),
+      ((Int.sign (2 * (m : ℤ) - (n : ℤ) - 5) : ℝ) + (-1 : ℝ) ^ ((min (m : ℕ) (n : ℕ)) + 3)) /
+      (Nat.factorial ((max (m : ℕ) (n : ℕ)) + 1) : ℝ)) =
+      (1249 : ℝ) / 120 - 4 * Real.exp 1 := by
+  sorry
+```
