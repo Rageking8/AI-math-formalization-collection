@@ -19,6 +19,7 @@ Lean:
 1. `Complete the following lean 4 proof`
 1. `Complete the following lean 4 proof and golf it to the smallest size possible`
 1. `Complete the following lean 4 proof without using native_decide`
+1. `Complete the following lean 4 proof without using native_decide and golf it to the smallest size possible`
 
 #### `<problem>`
 
