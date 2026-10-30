@@ -2,6 +2,10 @@
 
 Bunch of sample solutions from various models.
 
+## Inclusion
+
+Only successful attempts are included in the collection, meaning multiple sessions might be needed to get a valid proof, and harder problems will only have solutions by a few stronger models.
+
 ## Prompt structure
 
 ### First prompt
