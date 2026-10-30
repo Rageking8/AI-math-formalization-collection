@@ -1,6 +1,6 @@
 # Not solved yet
 
-List of potentially unsound problems that have not been solved by an AI system. Problems here generally fall into two buckets: those that pose genuine mathematical difficulties or are open problems, and those that present challenges in Lean formalization.
+List of potentially unsound problems that have not been solved by an AI system. Problems here generally fall into two buckets: those that pose genuine mathematical difficulties or are open problems, and those that present challenges in formalization.
 
 ## Problems
 
@@ -100,7 +100,7 @@ theorem no_pos_int_a_b_repdigit_in_base :
   sorry
 ```
 
-### Require theorems not in Mathlib
+### Require theorems not in Lean Mathlib
 
 Needs the Gelfond–Schneider theorem:
 
