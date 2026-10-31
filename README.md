@@ -1037,3 +1037,14 @@ theorem double_infinite_sum_sgn_factorial_eq :
       (1249 : ℝ) / 120 - 4 * Real.exp 1 := by
   sorry
 ```
+
+## 88. Prove that $\\{ \\; x \in ℤ^+ \mid \exists y, z \in ℤ^+, \\; x^2 + y^2 + 6 = xyz \\; \\} = \\{ \\; x \in ℤ^+ \mid \exists k \in ℤ, \\; 15x^2 - 6 = k^2 \\; \\}$
+
+```lean4
+import Mathlib
+
+theorem diophantine_set_eq :
+    { x : ℤ | 0 < x ∧ ∃ (y z : ℤ), 0 < y ∧ 0 < z ∧ x ^ 2 + y ^ 2 + 6 = x * y * z } =
+      { x : ℤ | 0 < x ∧ IsSquare (15 * x ^ 2 - 6) } := by
+  sorry
+```
