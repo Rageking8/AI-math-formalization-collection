@@ -32,6 +32,16 @@ theorem ceil_pow_expr_odd (x : ℕ) :
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Reals ZArith.
+Open Scope R_scope.
+
+Theorem ceil_pow_expr_odd : forall x : nat,
+    Z.Odd (Zceil (((5 + sqrt 17) / 2) ^ x)).
+Proof.
+Admitted.
+```
+
 ## 2. Prove that if $x + y + z = \pi$, then $\sin{x}\sin{y}\sin{z} \le \frac{3\sqrt{3}}{8}$
 
 ```lean4
