@@ -936,7 +936,7 @@ theorem factorial_add_one_div_eq_iff_x_two_y_three
   sorry
 ```
 
-## 81. Let $O(n)$ and $E(n)$ denote the number of odd and even digits in the base-10 representation of $n$, respectively. Proof that the smallest positive integer $n$ that satisfies both $(O(n^2 + n))^2 = 3 \cdot O(n)$ and $E(n^2 - n) = 5 \cdot E(n)$ is $1059$
+## 81. Let $O(n)$ and $E(n)$ denote the number of odd and even digits in the base-10 representation of $n$, respectively. Prove that the smallest positive integer $n$ that satisfies both $(O(n^2 + n))^2 = 3 \cdot O(n)$ and $E(n^2 - n) = 5 \cdot E(n)$ is $1059$
 
 ```lean4
 import Mathlib
@@ -992,7 +992,7 @@ theorem floor_ceil_fract_system_unique_solution (x y : ℝ) :
   sorry
 ```
 
-## 85. Let curve $C$ be defined by $xy^{13} - 4y = x^{5x} - 3x - 1$, for $x \gt 0$. Proof that the tight upper bound on the number of intersections between $C$ and any vertical line is $3$
+## 85. Let curve $C$ be defined by $xy^{13} - 4y = x^{5x} - 3x - 1$, for $x \gt 0$. Prove that the tight upper bound on the number of intersections between $C$ and any vertical line is $3$
 
 ```lean4
 import Mathlib
