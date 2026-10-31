@@ -100,6 +100,19 @@ theorem no_pos_int_a_b_repdigit_in_base :
   sorry
 ```
 
+```lean4
+import Mathlib
+
+def tetrate (a : ℕ) : ℕ → ℕ
+  | 0 => 1
+  | n + 1 => a ^ (tetrate a n)
+
+theorem smallest_base_same_last_100_digits :
+    IsLeast { b : ℕ | 1 < b ∧ ∀ n m : ℕ, 2 ≤ n → 2 ≤ m →
+      tetrate b n % (10 ^ 100) = tetrate b m % (10 ^ 100) } 100 := by
+  sorry
+```
+
 ### Require theorems not in Lean Mathlib
 
 Needs the Gelfond–Schneider theorem:
