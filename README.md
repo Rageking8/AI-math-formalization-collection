@@ -55,6 +55,17 @@ theorem sin_mul_upper_bound
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Reals.
+Open Scope R_scope.
+
+Theorem sin_mul_upper_bound : forall x y z : R,
+    x + y + z = PI ->
+      sin x * sin y * sin z <= 3 * sqrt 3 / 8.
+Proof.
+Admitted.
+```
+
 ## 3. Prove that no finite sum of distinct irreducible fractions of the form $\frac{2}{n}$ equals $\frac{5}{121}$
 
 ```lean4
