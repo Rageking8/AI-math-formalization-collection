@@ -1058,3 +1058,17 @@ theorem diophantine_set_eq :
       { x : ℤ | 0 < x ∧ IsSquare (15 * x ^ 2 - 6) } := by
   sorry
 ```
+
+## 89. Let $\star$ be a binary operator chosen from $\\{ +, -, \times, \div \\}$. Prove that there are exactly $8$ quintuples $(\star_a, \star_b, \star_c, \star_d, \star_e)$ such that for all real numbers $x > 1$, $\left(\frac{x^3 \star_a 1}{x \star_b 1}\right) \star_c (x \star_b 1) = x \star_d (x \star_e 1)$
+
+```lean4
+import Mathlib
+
+theorem op_quintuples_count_exactly_eight :
+    let ops : Set (ℝ → ℝ → ℝ) := { (· + ·), (· - ·), (· * ·), (· / ·) };
+      Set.ncard { q ∈ ops ×ˢ ops ×ˢ ops ×ˢ ops ×ˢ ops |
+      let (a, b, c, d, e) := q
+      ∀ x : ℝ, x > 1 →
+      c ((a (x ^ 3) 1) / (b x 1)) (b x 1) = d x (e x 1) } = 8 := by
+  sorry
+```
