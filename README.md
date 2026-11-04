@@ -1072,3 +1072,17 @@ theorem op_quintuples_count_exactly_eight :
       c ((a (x ^ 3) 1) / (b x 1)) (b x 1) = d x (e x 1) } = 8 := by
   sorry
 ```
+
+## 90. Let $a \parallel b$ be the base-10 concatenation of $a$ and $b$. Prove that there are no positive integers $a, b \gt 1$ such that $a \parallel (b^3) \equiv a^2 + b \pmod{(ab)^4 - 7}$
+
+```lean4
+import Mathlib
+
+def concat (a b : ℕ) : ℕ :=
+  a * 10 ^ (Nat.toDigits 10 b).length + b
+
+theorem no_positive_integers_concat_mod :
+    ¬ ∃ (a b : ℕ), 1 < a ∧ 1 < b ∧ (concat a (b ^ 3) ≡
+      a ^ 2 + b [MOD (a * b) ^ 4 - 7]) := by
+  sorry
+```
