@@ -1086,3 +1086,23 @@ theorem no_positive_integers_concat_mod :
       a ^ 2 + b [MOD (a * b) ^ 4 - 7]) := by
   sorry
 ```
+
+## 91. Let $a \parallel b$ be the base-10 concatenation of $a$ and $b$. Prove that for any positive integer $n$, the tight upper bound of $\frac{a \parallel b \parallel c}{a \cdot b \cdot c}$ over all distinct composite positive integers $a, b, c$ satisfying $a + b + c \gt n$ is $\frac{4101}{40}$
+
+```lean4
+import Mathlib
+
+def concat (a b : ℕ) : ℕ :=
+  a * 10 ^ (Nat.toDigits 10 b).length + b
+
+def preconditions (n a b c : ℕ) : Prop :=
+  (1 < a ∧ ¬Nat.Prime a) ∧ (1 < b ∧ ¬Nat.Prime b) ∧ (1 < c ∧ ¬Nat.Prime c) ∧
+  a ≠ b ∧ b ≠ c ∧ a ≠ c ∧ a + b + c > n
+
+theorem tight_upper_bound_concat_div_prod (n : ℕ) (hn : 0 < n) :
+    (∀ a b c : ℕ, preconditions n a b c →
+      (concat (concat a b) c : ℚ) / (a * b * c : ℚ) ≤ 4101 / 40) ∧
+      (∃ a b c : ℕ, preconditions n a b c ∧
+      (concat (concat a b) c : ℚ) / (a * b * c : ℚ) = 4101 / 40) := by
+  sorry
+```
