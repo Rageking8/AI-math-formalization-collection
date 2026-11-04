@@ -1117,3 +1117,17 @@ theorem tight_upper_bound_concat_div_prod (n : ℕ) (hn : 0 < n) :
       (concat (concat a b) c : ℚ) / (a * b * c : ℚ) = 4101 / 40) := by
   sorry
 ```
+
+## 92. Prove that for every positive integer $n$, there exists a positive integer $x \gt 1$ such that $n^{x + 1} + n \\, \mid \\, ^{x}n + n$
+
+```lean4
+import Mathlib
+
+def tetrate (a : ℕ) : ℕ → ℕ
+  | 0 => 1
+  | n + 1 => a ^ (tetrate a n)
+
+theorem exists_solution_tetrate_dvd (n : ℕ) (hn : 0 < n) :
+    ∃ x : ℕ, 1 < x ∧ (n ^ (x + 1) + n) ∣ (tetrate n x + n) := by
+  sorry
+```
