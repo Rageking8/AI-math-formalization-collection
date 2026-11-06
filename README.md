@@ -1131,3 +1131,18 @@ theorem exists_solution_tetrate_dvd (n : ℕ) (hn : 0 < n) :
     ∃ x : ℕ, 1 < x ∧ (n ^ (x + 1) + n) ∣ (tetrate n x + n) := by
   sorry
 ```
+
+## 93. Let $a$ and $b$ be complex numbers such that $\lvert a^3 + b^3 \rvert = 2$ and $1 \le \lvert a - b \rvert \le 2$. Prove that the tight lower bound of $\frac{\lvert a + b \rvert^2}{\lvert a - b \rvert^2}$ is $\left(\sqrt[3]{\phi} - \sqrt[3]{\phi - 1}\right)^2$
+
+```lean4
+import Mathlib
+
+def preconditions (a b : ℂ) : Prop :=
+  ‖a ^ 3 + b ^ 3‖ = 2 ∧ 1 ≤ ‖a - b‖ ∧ ‖a - b‖ ≤ 2
+
+theorem tight_lower_bound_complex_ratio :
+    let bound := (Real.goldenRatio ^ (1 / 3 : ℝ) - (Real.goldenRatio - 1) ^ (1 / 3 : ℝ)) ^ 2;
+      (∀ a b : ℂ, preconditions a b → bound ≤ ‖a + b‖ ^ 2 / ‖a - b‖ ^ 2) ∧
+      (∃ a b : ℂ, preconditions a b ∧ ‖a + b‖ ^ 2 / ‖a - b‖ ^ 2 = bound) := by
+  sorry
+```
