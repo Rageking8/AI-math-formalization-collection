@@ -88,6 +88,16 @@ theorem log_abs_sum_lower_bound (x y : ℝ) (hx : 0 < x) (hy : 0 < y) :
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Reals.
+Open Scope R_scope.
+
+Theorem log_abs_sum_lower_bound (x y : R) (hx : 0 < x) (hy : 0 < y) :
+    Rabs (ln x) + Rabs (ln y) >= 2 * ln ((x + y) / (2 * sqrt (x * y))).
+Proof.
+Admitted.
+```
+
 ## 5. Prove that if $1 < x < y$ and $x^y = y^x$, then $x^{y^y} > y^{x^x}$
 
 ```lean4
