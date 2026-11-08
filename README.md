@@ -108,6 +108,17 @@ theorem power_tower_inequality {x y : ℝ} (h1 : 1 < x) (h2 : x < y) (h3 : x ^ y
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Reals.
+Open Scope R_scope.
+
+Theorem power_tower_inequality (x y : R) (hx : 1 < x)
+    (hxy : x < y) (heq : Rpower x y = Rpower y x) :
+      Rpower x (Rpower y y) > Rpower y (Rpower x x).
+Proof.
+Admitted.
+```
+
 ## 6. Prove that there are no positive integers $x$, $y$, and $z$ such that $((x \bmod y) \bmod z)((y \bmod z) \bmod x)((z \bmod x) \bmod y) = gcd(x, y, z)$
 
 ```lean4
