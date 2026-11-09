@@ -129,6 +129,17 @@ theorem no_mod_mod_mod_eq_gcd (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < 
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Arith.
+
+Theorem no_mod_mod_mod_eq_gcd (x y z : nat)
+    (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) :
+      ((x mod y) mod z) * ((y mod z) mod x) * ((z mod x) mod y) <>
+      Nat.gcd (Nat.gcd x y) z.
+Proof.
+Admitted.
+```
+
 ## 7. Let $S(n)$ be the base-10 digit sum of $n$. Prove that for all positive integers $n$ and $x$, $S(n^x) \leq S(n)^x$
 
 ```lean4
