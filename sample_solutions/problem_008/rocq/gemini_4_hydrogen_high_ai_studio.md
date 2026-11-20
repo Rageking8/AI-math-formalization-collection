@@ -5,6 +5,10 @@ Date: `20 November 2026`\
 Line count: `340`\
 Turn count: `7`
 
+## Note
+
+This solution uses `vm_compute`.
+
 ## Solution
 
 ```rocq
