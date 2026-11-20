@@ -160,6 +160,16 @@ theorem no_x_sq_plus_two_x_dvd_y_sq_plus_one (x y : ℕ) (hx : 0 < x) (hy : 0 < 
   sorry
 ```
 
+```rocq
+From Stdlib Require Import ZArith.
+Open Scope Z_scope.
+
+Theorem no_x_sq_plus_two_x_dvd_y_sq_plus_one (x y : Z) (hx : 0 < x)
+    (hy : 0 < y) : ~ (x ^ 2 + 2 * x | y ^ 2 + 1).
+Proof.
+Admitted.
+```
+
 ## 9. Prove that if $n$ is a positive integer such that $n \mid 2^n + 1$ and $n \mid 3^n + 1$, then $n = 1$
 
 ```lean4
