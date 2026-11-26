@@ -180,6 +180,16 @@ theorem eq_one_of_dvd_pow_add_one (n : ℕ) (hn : 0 < n) (h2 : n ∣ 2^n + 1) (h
   sorry
 ```
 
+```rocq
+From Stdlib Require Import ZArith.
+Open Scope Z_scope.
+
+Theorem eq_one_of_dvd_pow_add_one (n : Z) (hn : 0 < n)
+    (h2 : (n | 2 ^ n + 1)) (h3 : (n | 3 ^ n + 1)) : n = 1.
+Proof.
+Admitted.
+```
+
 ## 10. Prove that there are no natural numbers $x$ and $y$ such that $(((x^3 + y^3) \bmod 18) \bmod 17) = 15$
 
 ```lean4
