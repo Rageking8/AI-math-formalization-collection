@@ -31,6 +31,7 @@ Lean:
 
 Rocq:
 1. `Complete the following rocq 9.1 proof`
+1. `Complete the following rocq 9.1 proof without using vm_compute`
 
 #### `<problem>`
 
