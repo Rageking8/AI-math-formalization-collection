@@ -200,6 +200,15 @@ theorem no_nat_cube_sum_mod_eq (x y : ℕ) :
   sorry
 ```
 
+```rocq
+From Stdlib Require Import Arith.
+
+Theorem no_nat_cube_sum_mod_eq (x y : nat) :
+    (((x ^ 3 + y ^ 3) mod 18) mod 17) <> 15.
+Proof.
+Admitted.
+```
+
 ## 11. Prove that there are no real numbers $x$ and $y$ such that $x^2 + y^2 + 4 = 2\sqrt{x^2y + xy^2 + x + y}$
 
 ```lean4
